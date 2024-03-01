@@ -62,3 +62,6 @@ mapkey("<leader>fh", "Telescope help_tags", "Show Help Tags")
 mapkey("<leader>ff", "Telescope find_files", "Find Files")
 mapkey("<leader>fg", "Telescope live_grep", "Live Grep")
 mapkey("<leader>fb", "Telescope buffers", "Find Buffers")
+
+-- Markdown Preview
+mapkey("<C-m>", "MarkdownPreview", "n")
