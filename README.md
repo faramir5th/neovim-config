@@ -1,6 +1,8 @@
 # My personal configuration file for neovim
 
-> For outside clipborad working need install a *wl-clipboard*
+### Prerequisites
+- For outside clipborad working need install a *wl-clipboard*
+- typescript npm nodejs lua-language-server luarocks ripgrep fd
 
 ## Plugins
 1. Plugin manager: [lazy.nvim](https://github.com/folke/lazy.nvim)
