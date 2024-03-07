@@ -4,7 +4,7 @@ local mapkey = require("util.keymapper").mapvimkey
 mapkey("<leader>bn", "bnext", "n") -- Next buffer
 mapkey("<leader>bp", "bprevious", "n") -- Prev buffer
 mapkey("<leader>bb", "e #", "n") -- Switch to Other Buffer
-mapkey("<leader>q", "bd", "n") -- Close buffer
+mapkey("<leader>qb", "bd", "n") -- Close buffer
 
 -- Directory Navigatio}n
 mapkey("<leader>m", "NvimTreeFocus", "n")
@@ -32,12 +32,6 @@ mapkey("<C-Right>", "vertical resize -2", "n")
 
 -- Show Full File-Path
 mapkey("<leader>pa", "echo expand('%:p')", "n") -- Show Full File Path
-
---[[ Notes
-mapkey("<leader>ng", "Neorg workspace general", "n")
-mapkey("<leader>nw", "Neorg workspace work", "n")
-mapkey("<leader>ny", "Neorg workspace youtube", "n")
-]]
 
 -- Indenting
 vim.keymap.set("v", "<", "<gv", { silent = true, noremap = true })
