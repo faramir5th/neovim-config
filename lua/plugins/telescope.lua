@@ -35,4 +35,11 @@ return {
 	lazy = false,
 	dependencies = { "nvim-lua/plenary.nvim" },
 	config = config,
+	keys = {
+		mapvimkey("<leader>fk", "Telescope keymaps", "Show Keymaps"),
+		mapvimkey("<leader>fh", "Telescope help_tags", "Show Help Tags"),
+		mapvimkey("<leader>ff", "Telescope find_files", "Find Files"),
+		mapvimkey("<leader>fg", "Telescope live_grep", "Live Grep"),
+		mapvimkey("<leader>fb", "Telescope buffers", "Find Buffers"),
+	},
 }
