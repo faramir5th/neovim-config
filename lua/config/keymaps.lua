@@ -4,7 +4,7 @@ local mapkey = require("util.keymapper").mapvimkey
 mapkey("<leader>bn", "bnext", "n") -- Next buffer
 mapkey("<leader>bp", "bprevious", "n") -- Prev buffer
 mapkey("<leader>bb", "e #", "n") -- Switch to Other Buffer
-mapkey("<leader>qb", "bd", "n") -- Close buffer
+mapkey("<leader>bk", "bd", "n") -- Close buffer
 
 -- Directory Navigatio}n
 mapkey("<leader>m", "NvimTreeFocus", "n")
