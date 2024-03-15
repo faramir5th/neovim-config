@@ -42,7 +42,9 @@ local api = vim.api
 -- Comments
 api.nvim_set_keymap("n", "<C-/>", "gtc", { noremap = false })
 api.nvim_set_keymap("v", "<C-/>", "goc", { noremap = false })
-
+api.nvim_set_keymap("n", "<C-_>", "gtc", { noremap = false })
+api.nvim_set_keymap("v", "<C-_>", "goc", { noremap = false })
+--
 -- Telescope
 mapkey("<leader>fk", "Telescope keymaps", "Show Keymaps")
 mapkey("<leader>fh", "Telescope help_tags", "Show Help Tags")
