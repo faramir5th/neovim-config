@@ -40,8 +40,8 @@ vim.keymap.set("v", ">", ">gv", { silent = true, noremap = true })
 local api = vim.api
 
 -- Comments
-api.nvim_set_keymap("n", "<C-_>", "gtc", { noremap = false })
-api.nvim_set_keymap("v", "<C-_>", "goc", { noremap = false })
+api.nvim_set_keymap("n", "<C-/>", "gtc", { noremap = false })
+api.nvim_set_keymap("v", "<C-/>", "goc", { noremap = false })
 
 -- Telescope
 mapkey("<leader>fk", "Telescope keymaps", "Show Keymaps")
