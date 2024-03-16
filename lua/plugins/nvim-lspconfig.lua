@@ -159,13 +159,6 @@ local config = function()
 			completion = true,
 		},
 	})
-
-  -- Hyprlang
-  lspconfig.hyprlang.setup ({
-    capabilities = capabilities,
-		on_attach = on_attach,
-		filetypes = { ".*/hypr/.*%.conf" },
-  })
 end
 
 return {
