@@ -128,6 +128,18 @@ local config = function()
 		},
 	})
 
+	local luacheck = require("efmls-configs.linters.luacheck")
+	local stylua = require("efmls-configs.formatters.stylua")
+	local flake8 = require("efmls-configs.linters.flake8")
+	local black = require("efmls-configs.formatters.black")
+	local eslint_d = require("efmls-configs.linters.eslint_d")
+	local prettierd = require("efmls-configs.formatters.prettier_d")
+	local fixjson = require("efmls-configs.formatters.fixjson")
+	local shellcheck = require("efmls-configs.linters.shellcheck")
+	local shfmt = require("efmls-configs.formatters.shfmt")
+	local hadolint = require("efmls-configs.linters.hadolint")
+	local solhint = require("efmls-configs.linters.solhint")
+
 	-- configure efm server
 	lspconfig.efm.setup({
 		filetypes = {
@@ -147,9 +159,8 @@ local config = function()
 			"solidity",
 			"html",
 			"css",
-			"c",
-			"cpp",
 		},
+
 		init_options = {
 			documentFormatting = true,
 			documentRangeFormatting = true,
@@ -157,6 +168,27 @@ local config = function()
 			documentSymbol = true,
 			codeAction = true,
 			completion = true,
+		},
+
+		settings = {
+			languages = {
+				lua = { luacheck, stylua },
+				python = { flake8, black },
+				typescript = { eslint_d, prettierd },
+				json = { eslint_d, fixjson },
+				jsonc = { eslint_d, fixjson },
+				sh = { shellcheck, shfmt },
+				javascript = { eslint_d, prettierd },
+				javascriptreact = { eslint_d, prettierd },
+				typescriptreact = { eslint_d, prettierd },
+				svelte = { eslint_d, prettierd },
+				vue = { eslint_d, prettierd },
+				markdown = { prettierd },
+				docker = { hadolint, prettierd },
+				solidity = { solhint },
+				html = { prettierd },
+				css = { prettierd },
+			},
 		},
 	})
 end
